@@ -1,0 +1,167 @@
+*{
+    overscroll-behavior: none;
+    overflow: none;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    background-image: url("/Screenshot 2025-11-05 at 09.41.09.png");
+    background-size: cover;
+ height: 667px;
+
+}
+#ball-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left: 50%;
+    transform: rotate(95.7deg);
+}
+
+#ball {
+    position: absolute;
+    
+    /* height: 280px; */
+    /*transform: translate(-50.8%, -50%);*/
+    width: 285px;
+    aspect-ratio: 1;
+    
+    
+
+}
+
+.spin-rød {
+animation: spins-rød 3s ease-out; 
+}
+
+.spin-svart {
+animation: spins-svart 3s ease-out; 
+}
+
+@keyframes spins-rød {
+    from {
+        transform: rotate(95.7deg);
+    }
+    to {
+        transform: rotate(815.7deg);
+    }
+}
+
+@keyframes spins-svart {
+    0% {
+        transform: rotate(95.7deg);
+    }
+    80% {
+        transform: rotate(844deg);
+    }
+    100% {
+        transform: rotate(844deg);
+    }
+}
+
+#backround {
+    width: 100%;
+    height: 100%;
+}
+
+#resultat {
+    align-items: center;
+    justify-content: space-around;
+    height: 800px;
+    display: flex;
+    color: white;
+}
+
+#alt {
+    width: 100%;
+    height: 100%;
+}
+
+#rød {
+    background-color: #6C1717;
+    width: 300px;
+    height: 450px;
+    border-radius: 40px;
+    align-items: center;
+    flex-direction: column;
+    border: 7px solid black;
+    margin-right: 450px;
+    font-family: "lobster";
+    font-size: 28px;
+    box-shadow: 0px 0px 20px 3px rgba(255, 242, 62, 0.878);
+    display: flex;
+    justify-content: center;
+}
+
+.pulse-red {
+  animation: redPulse 1s ease;
+}
+
+@keyframes redPulse {
+  0%   { color: red;}
+  100% { color: #ffffff;}
+}
+
+#blå {
+background-color: #6C1717;
+width: 310px;
+height: 440px;
+border-radius: 40px;
+align-items: center;
+flex-direction: column;
+border: 7px solid black;
+color: #ffffff;
+display: flex;
+font-size: 28px;
+font-family: "lobster";
+box-shadow: 0px 0px 20px 3px rgba(255, 242, 62, 0.878);
+}
+
+.pulse-black {
+  animation: blackPulse 0.7s ease;
+}
+
+@keyframes blackPulse {
+  0%   { color: rgb(0, 0, 0);}
+  100% { color: #ffffff;}
+}
+
+#testbutton {
+    position: absolute;
+
+    top: 83%;
+    left: 41.3%;
+    background-color: #6C1717;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 5px rgba(255, 242, 62, 0.878);
+    border: black 4px solid;
+    font-family: "lobster";
+    padding: 1.2%;
+    padding-left: 2.3%;
+    padding-right: 2.3%;
+    font-size: 35px;
+    z-index: 2;
+    border-radius: 30px;
+}
+
+#buttonid {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+}
+
+#counterrød {
+    font-size: 130px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+#counterblå {
+    font-size: 130px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
